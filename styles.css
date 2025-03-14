@@ -1,0 +1,216 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* منع ظهور أشرطة التمرير أثناء التحريك */
+    animation: backgroundAnimation 10s ease infinite; /* خلفية متحركة */
+}
+
+/* خلفية متحركة */
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #1a1a1a; /* خلفية داكنة */
+        background-image: linear-gradient(135deg, #5a3e36, #f7d794);
+    }
+    50% {
+        background-color: #2a2a2a; /* خلفية أفتح قليلاً */
+        background-image: linear-gradient(135deg, #5a3e36, #f7d794);
+    }
+    100% {
+        background-color: #1a1a1a; /* خلفية داكنة */
+        background-image: linear-gradient(135deg, #5a3e36, #f7d794);
+    }
+}
+
+header {
+    text-align: center;
+    padding: 60px 0; /* زيادة الحشو */
+    background: linear-gradient(90deg, #5a3e36, #f7d794); /* تدرج لوني من الوردي النيون إلى الأصفر */
+    box-shadow: 0 0 30px #5a3e36, 0 0 10px #f7d794; /* تأثير النيون */
+    animation: pulse 2s infinite; /* تحريك النبض */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive; /* خط أنيق */
+    font-size: 4.5em; /* زيادة حجم الخط */
+    text-shadow: 0 0 20px #5a3e36, 0 0 30px #f7d794; /* تأثير النيون */
+    animation: fadeIn 1s ease-in-out; /* تحريك الظهور التدريجي */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: slideIn 1s ease; /* تحريك الانزلاق */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-text {
+    animation: textAnimation 1.5s ease forwards; /* تحريك النص ثلاثي الأبعاد */
+    opacity: 0; /* بداية مخفية */
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateZ(-100px) rotateY(90deg); /* بداية خارج الشاشة مع دوران */
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0) rotateY(0); /* نهاية في مكانها الطبيعي */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 30px; /* زيادة الحشو */
+    background-color: #333;
+    color: #f7d794; /* لون النص الأصفر */
+    font-size: 1.2em; /* زيادة حجم الخط */
+    box-shadow: 0 -2px 20px rgba(255, 255, 255, 0.3); /* تأثير الظل */
+    animation: slideInFooter 1s ease-in-out; /* تحريك الانزلاق */
+    opacity: 0; /* بداية مخفية */
+    animation-fill-mode: forwards; /* الحفاظ على الحالة النهائية */
+    animation-delay: 1s; /* تأخير لتحميل المحتوى أولاً */
+}
+
+@keyframes slideInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer p {
+    text-shadow: 0 0 10px #f7d794, 0 0 20px #f7d794; /* تأثير النيون */
+}
+
+/* تأثير التحويم على header */
+header:hover {
+    box-shadow: 0 0 40px #5a3e36, 0 0 20px #f7d794; /* زيادة تأثير النيون عند التحويم */
+    transition: box-shadow 0.3s ease; /* انتقال سلس */
+}
+
+/* حاوية الأزرار */
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* التأكد من أن الأزرار فوق الفيديو */
+    width: 100%; /* التأكد من أن الحاوية تأخذ العرض الكامل */
+}
+
+/* أنماط أزرار النيون */
+.neon-button {
+    background-color: black;
+    border: 2px solid #5a3e36;
+    color: #f7d794;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #5a3e36, 0 0 20px #5a3e36, 0 0 40px #5a3e36;
+    transition: all 0.3s ease;
+}
+
+/* تأثير التحويم على أزرار النيون */
+.neon-button:hover {
+    background-color: #5a3e36;
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #5a3e36, 0 0 40px #5a3e36, 0 0 80px #5a3e36;
+    transform: scale(1.1);
+}
+
+/* Media Queries للأجهزة المحمولة */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* تصغير حجم الخط للشاشات الصغيرة */
+    }
+
+    main {
+        font-size: 1.2em; /* تصغير حجم الخط للشاشات الصغيرة */
+        margin: 10px; /* تقليل الهوامش */
+    }
+
+    .neon-button {
+        padding: 10px 20px; /* تصغير حجم الأزرار */
+        font-size: 16px; /* تصغير حجم الخط في الأزرار */
+    }
+
+    .button-container {
+        top: 40%; /* تعديل الموضع للأجهزة المحمولة */
+    }
+
+    footer {
+        padding: 20px; /* تقليل الحشو */
+        font-size: 1em; /* تصغير حجم الخط */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* تصغير حجم الخط أكثر للشاشات الصغيرة جدًا */
+    }
+
+    main {
+        font-size: 1em; /* تصغير حجم الخط أكثر */
+    }
+
+    .neon-button {
+        padding: 8px 16px; /* تصغير حجم الأزرار أكثر */
+        font-size: 14px; /* تصغير حجم الخط أكثر */
+    }
+
+    .button-container {
+        top: 30%; /* تعديل الموضع أكثر */
+    }
+
+    footer {
+        padding: 15px; /* تقليل الحشو أكثر */
+        font-size: 0.9em; /* تصغير حجم الخط أكثر */
+    }
+}
